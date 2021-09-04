@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>
+        page2
+    </title>
+    <style>
+        #reenter {
+            color: rgb(158, 52, 52);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h3>
+            Dear <span id="firstname"></span> .Thank you for your inquiry. A 4 digit verification number has been sent to your phone number:
+            <span id="phone"></span> which is <span id="otpp"></span>. Please enter in the following box and submit for confirmation:
+        </h3>
+        <input type="text" id="cotp" placeholder="example 1234">
+        <input type="submit" onclick="return divert()"><span id="reenter"></span>
+
+    </div>
+
+
+    <script>
+        document.getElementById("firstname").innerHTML = localStorage.getItem("namevalue");
+        document.getElementById("phone").innerHTML = localStorage.getItem("phonevalue");
+        var x = localStorage.getItem("otpvalue");
+        document.getElementById("otpp").innerHTML = localStorage.getItem("otpvalue");
+        console.log(x);
+        var j = 0;
+
+        function divert() {
+
+            var cotp = document.getElementById("cotp").value;
+
+            if (cotp == x) {
+                document.location.href = "http://pixel6.co/";
+                return false;
+            } else {
+                document.getElementById("reenter").innerHTML = " Renter otp";
+                j++;
+            }
+            if (j > 3) {
+                document.location.href = "http://pixel6.co/404";
+            } else {
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>

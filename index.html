@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Pixel
+    </title>
+    <style>
+        * {
+            margin: 20px 0 20px 0;
+            padding: 0 0 0 0;
+        }
+        
+        .main {
+            margin: auto;
+            background-color: rgb(210, 212, 205);
+            width: 500px;
+            height: 500px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+        
+        span {
+            color: red;
+        }
+        
+        #p11 {
+            color: red;
+            float: left;
+            margin: 0 0 0 10px;
+        }
+        
+        #p111 {
+            color: rgb(44, 38, 41);
+            border: 1px solid;
+            background-color: antiquewhite;
+        }
+        
+        img {
+            margin: 13px 0 0 0;
+            padding: 0 0 0 0;
+            border: 1px solid grey;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <table>
+            <tr>
+                <td><label>Name:</label></td>
+                <td><input type="text" name="n1" id="n1" required><span id="n11"></span></td>
+            </tr>
+            <tr>
+                <td> <label>Email</label></td>
+                <td><input type="email" name="e1" id="e1" placeholder="email123@xyz.com"><span id="e11"></span></td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Phone No</label>
+                </td>
+                <td>
+                    <input type="text" name="p1" id="p1" placeholder="Example (123) - 456 - 7890">
+                </td>
+                <td>
+                    <div id="p11"></div>
+
+                </td>
+                <td>
+                    <span id="p111"></span>
+                </td>
+            </tr>
+            <tr>
+                <td> <input type="submit" onclick="return fun()"></td>
+                <td></td>
+
+            </tr>
+
+
+
+        </table>
+    </div>
+
+
+    <script>
+        document.getElementById('p1').addEventListener('keyup', function() {
+            var x = document.getElementById('p1').value;
+            var y = x.substring(1, 4);
+            var z = x.substring(6, 9);
+            var comp = "India";
+            if (y >= 621 && y <= 799) {
+                document.getElementById("p11").innerHTML = "<img src='jio.jpg' height=\'30px'\>";
+                comp = "jio";
+            } else if (y >= 801 && y <= 920) {
+                document.getElementById("p11").innerHTML = "<img src='idea.png' height=\'30px'\>";
+                comp = "idea";
+            } else if (y >= 921 && y <= 999) {
+                document.getElementById("p11").innerHTML = "<img src='vada.png' height=\'30px'\>";
+                comp = "Vodafone";
+            }
+
+
+            if (z == 900) {
+                document.getElementById("p111").innerHTML = "Maharashtra ," + comp;
+            } else if (z == 901) {
+                document.getElementById("p111").innerHTML = "UP " + comp;
+            } else if (z == 902) {
+                document.getElementById("p111").innerHTML = "MP " + comp;
+            } else if (z == 903) {
+                document.getElementById("p111").innerHTML = "AP" + comp;
+            } else if (z == 904) {
+                document.getElementById("p111").innerHTML = "HP " + comp;
+            } else if (z == 905) {
+                document.getElementById("p111").innerHTML = "J&k" + comp;
+            } else if (z == 906) {
+                document.getElementById("p111").innerHTML = "Gujrat " + comp;
+            } else if (z == 907) {
+                document.getElementById("p111").innerHTML = "Goa " + comp;
+            } else if (z == 908) {
+                document.getElementById("p111").innerHTML = "Kerala " + comp;
+            } else if (z == 909) {
+                document.getElementById("p111").innerHTML = "Karnataka" + comp;
+            } else if (z == 910) {
+                document.getElementById("p111").innerHTML = "Punjab " + comp;
+            } else if (z == 911) {
+                document.getElementById("p111").innerHTML = "Bengal " + comp;
+            } else if (z == 912) {
+                document.getElementById("p111").innerHTML = "Tamil Nadu " + comp;
+            } else if (z == 913) {
+                document.getElementById("p111").innerHTML = "Telangana " + comp;
+            } else if (z == 914) {
+                document.getElementById("p111").innerHTML = "Haryana " + comp;
+            } else if (z == 915) {
+                document.getElementById("p111").innerHTML = "Bihar " + comp;
+            } else if (z == 916) {
+                document.getElementById("p111").innerHTML = "Assam " + comp;
+            } else if (z == 917) {
+                document.getElementById("p111").innerHTML = "Rajasthan " + comp;
+            } else if (z == 918) {
+                document.getElementById("p111").innerHTML = "Tripura " + comp;
+            } else if (z == 919) {
+                document.getElementById("p111").innerHTML = "Odisha" + comp;
+            } else if (z == 920) {
+                document.getElementById("p111").innerHTML = "Chatisgarg " + comp;
+            } else if (z == 921) {
+                document.getElementById("p111").innerHTML = "Delhi " + comp;
+            } else if (z == 922) {
+                document.getElementById("p111").innerHTML = "Nagaland " + comp;
+            } else if (z == 923) {
+                document.getElementById("p111").innerHTML = "Arunachal Pradesh " + comp;
+            } else if (z == 924) {
+                document.getElementById("p111").innerHTML = "Sikkim " + comp;
+            } else if (z == 925) {
+                document.getElementById("p111").innerHTML = "Manipur " + comp;
+            } else if (z == 926) {
+                document.getElementById("p111").innerHTML = "Mizoram " + comp;
+            } else if (z == 927) {
+                document.getElementById("p111").innerHTML = "Meghalaya " + comp;
+            } else if (z == 928) {
+                document.getElementById("p111").innerHTML = "Andaman & Nicobar " + comp;
+            } else if (z == 929) {
+                document.getElementById("p111").innerHTML = "Chandigarh " + comp;
+            } else if (z == 930) {
+                document.getElementById("p111").innerHTML = "DNH & DD " + comp;
+            } else if (z == 931) {
+                document.getElementById("p111").innerHTML = "Ladakh " + comp;
+            } else if (z == 932) {
+                document.getElementById("p111").innerHTML = "Lakshadweep " + comp;
+            } else if (z == 933) {
+                document.getElementById("p111").innerHTML = "Punducherry " + comp;
+            } else {
+                document.getElementById("p111").innerHTML = comp;
+            }
+
+
+        });
+
+
+        document.getElementById('p1').addEventListener('keyup', function() {
+            var phoneNumber = document.getElementById('p1');
+            // var charCode = (evt.which) ? evt.which : evt.keyCode;
+
+            phoneNumber.value = phoneFormat(phoneNumber.value);
+        });
+
+        function phoneFormat(input) {
+            // Strip all characters from the input except digits
+
+            input = input.replace(/\D/g, '');
+
+            // Trim the remaining input to ten characters, to preserve phone number format
+            input = input.substring(0, 10);
+
+            // Based upon the length of the string, we add formatting as necessary
+            var size = input.length;
+            if (size == 0) {
+                input = input;
+            } else if (size < 4) {
+                input = '(' + input;
+            } else if (size < 7) {
+                input = '(' + input.substring(0, 3) + ') ' + input.substring(3, 6);
+            } else {
+                input = '(' + input.substring(0, 3) + ') ' + input.substring(3, 6) + ' - ' + input.substring(6, 10);
+            }
+            return input;
+        }
+
+        function fun() {
+            var a = document.getElementById("n1").value;
+            var b = document.getElementById("e1").value;
+            var c = document.getElementById("p1").value;
+            var i, j;
+            var f = 1;
+            if (a == "") {
+                document.getElementById("n11").innerHTML = "Please enter name";
+                return false;
+            }
+            for (i = 0; i < a.length; i++) {
+                if (!((a.charCodeAt(i) >= 65 && a.charCodeAt(i) <= 90) || (a.charCodeAt(i) >= 97 && a.charCodeAt(i) <= 122) || (a.charCodeAt(i) == 32))) {
+                    f = 0;
+                    break;
+                }
+
+            }
+            if (f == 0) {
+                document.getElementById("n11").innerHTML = "Only Characters allowed";
+                return false;
+            } else {
+                document.getElementById("n11").innerHTML = "";
+            }
+            f = 0;
+
+            if (b == "") {
+                document.getElementById("e11").innerHTML = "Enter mail";
+                return false;
+            }
+            const regex = /^([\.\_a-zA-Z0-9]+)@([a-zA-Z]+)\.([a-zA-Z]){2,8}$/;
+            if (regex.test(b)) {
+                document.getElementById("e11").innerHTML = "";
+            } else {
+                document.getElementById("e11").innerHTML = "Invalid";
+                return false;
+            }
+
+
+            if (c == "") {
+                document.getElementById("p11").innerHTML = "enter phone number";
+                return false;
+            }
+            if (!(c.length == 16)) {
+                // document.getElementById("p11").innerHTML = "Length should be 10";
+                return false;
+            } else {
+                document.getElementById("p11").innerHTML = "";
+            }
+
+            let numbero = '1234567890';
+            let otp = '';
+            for (var k = 0; k < 4; k++) {
+                otp += numbero[Math.floor(Math.random() * 10)];
+            }
+
+            var x = a.split(" ");
+
+            localStorage.setItem("namevalue", x[0]);
+            localStorage.setItem("phonevalue", c);
+            localStorage.setItem("otpvalue", otp);
+
+            document.location.href = "index2.html";
+
+        }
+    </script>
+
+
+
+</body>
+
+</html>
